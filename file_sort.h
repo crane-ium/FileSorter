@@ -8,17 +8,24 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <stdio.h>
+#include <windows.h>
+#include <string>
 
 using namespace std;
 
 class file_sort
 {
 public:
-    file_sort(string dir="rfiles");
+    file_sort(const string &fname="rfile", const string &dir="rfiles");
 
+    void run();
+    void sort_file(const string& fname);
 private:
     string __dir;
-    vector<string> file_names;
+    string __fname;
+    vector<string> __next; //Stores corresponding string for that vec
+    vector<ifstream*> __f_vec;
 };
 
 #endif // FILE_SORT_H

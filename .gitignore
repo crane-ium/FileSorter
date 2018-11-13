@@ -1,4 +1,9 @@
 *.pro*
 build-FileSorter*
 rfiles/*
+*.autosave
+*rfile*
+afile*
+
+
 

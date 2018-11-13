@@ -1,0 +1,13 @@
+--VERSION 1--
+../rfiles rfile
+Opened 100 files
+Starting
+Time was 1086.14 milliseconds
+generate_files(100, 10000) at 7.41MB total
+
+Opened 100 files
+Starting
+Time was 122277 milliseconds
+generate_files(100, 1000000) at 954MB Total
+
+--Version 2--
