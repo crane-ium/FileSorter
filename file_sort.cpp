@@ -18,7 +18,7 @@ void file_sort::run(){
             string str;
             (*fptr) >> str;
             __next.push_back(str);
-            cout << str << endl;
+//            cout << str << endl;
             count++;
         }else{
             exists_flag = false;
@@ -32,30 +32,51 @@ void file_sort::run(){
     sortedfile.open("../"+__fname+".txt", fstream::out | fstream::trunc);
     string* smallest;
     size_t i, c;
+    static bool flag;
     LARGE_INTEGER frequency, start_t, end_t;
     double total_t;
-    QueryPerformanceFrequency(&frequency);
-    QueryPerformanceCounter(&start_t);
 
     if(sortedfile.is_open()){
         //Major work in here
         cout << "Starting\n";
+        QueryPerformanceFrequency(&frequency);
+        QueryPerformanceCounter(&start_t);
+
         while(__f_vec.size() > 0){
             smallest = &__next[0];
             i = 0;
             for(c = 1; c < __f_vec.size(); c++){
-                if(__next[c].size() < (*smallest).size()
-                    || (__next[c].size() == (*smallest).size()
-                        && __next[c] < (*smallest))){
+//                if(__next[c].size() < (*smallest).size()
+//                    || (__next[c].size() == (*smallest).size()
+//                        && __next[c] < (*smallest))){
+//                    smallest = &__next[c];
+//                    i = c;
+//                }
+                if(__next[c].size() <= (*smallest).size()){
+                    flag = false;
+//                    cout << "Breaking " << __next[c] << ":"<<(*smallest) << endl;
+                    if(__next[c].size() == (*smallest).size())
+                        for(size_t x = 0; x < __next[c].size(); x++)
+                            if(__next[c][x] <= (*smallest)[x]){
+                                if(__next[c][x] == (*smallest)[x])
+                                    continue;
+                                break;
+                            }else{
+                                flag = true;
+                                break;
+                            }
+                    if(flag)
+                        continue;
                     smallest = &__next[c];
                     i = c;
                 }
             }
+//            cout << i<<":"<<(*smallest) << " ";
             sortedfile << (*smallest) << " ";
-//            cout << (*smallest) << " ";
             if(!((*__f_vec[i]) >> __next[i])){
                 auto it = __f_vec.begin() + i;
                 (*it) = move(__f_vec.back());
+                (*it)->close(); //CLOSE STREAM
                 __f_vec.pop_back();
                 auto nit = __next.begin() + i;
                 (*nit) = move(__next.back());
@@ -97,4 +118,44 @@ void file_sort::sort_file(const string &fname){
         cout << "Error opening\n";
         return;
     }
+}
+bool file_sort::check_sorted() const{
+    //Checks the fname if it's sorted
+    bool sorted = true;
+    ifstream file;
+    file.open("../"+__fname+".txt", fstream::in);
+    string previous="";
+    string next;
+    if(file.is_open()){
+        file >> previous;
+        while(file >> next){
+            if(next.size() > previous.size()){
+                previous = next;
+                continue;
+            }else{
+                if(next.size() == previous.size()){
+                    for(size_t i = 0; i < next.size(); i++){
+                        if(next[i] > previous[i])
+                            break;
+                        else if(next[i] < previous[i]){
+                            cout << next << " < " << previous << endl;
+                            file.close();
+                            return false;
+                        }
+                    }
+                    continue;
+                }else{
+                    cout << next << " < " << previous << endl;
+                    file.close();
+                    return false;
+                }
+            }
+            cout << next << " < " << previous << endl;
+            file.close();
+            return false;
+        }
+        file.close();
+        return true;
+    }else
+        cout << __fname << " could not be check_sorted\n";
 }

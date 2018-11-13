@@ -21,6 +21,7 @@ public:
 
     void run();
     void sort_file(const string& fname);
+    bool check_sorted() const;
 private:
     string __dir;
     string __fname;

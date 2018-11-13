@@ -32,6 +32,7 @@ void generate_files(const size_t files,
             cout << "No file: " << fname << endl;
             continue;
         }
+        cout << "Made " << "../"+dir+fname << endl;
         file.close();
     }
 }

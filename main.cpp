@@ -10,11 +10,12 @@ int main()
 {
 //    srand(time(NULL));
 //    cout << gen_string(5, 10) << endl;
-    generate_files(100, 10000);
+//    if(false)
+        generate_files(100, 1000000);
     file_sort sorter;
     sorter.run();
 
-    string one, two;
+    cout << "Sorted: " << (sorter.check_sorted()?"True":"False") << endl;
 
 //    sorter.sort_file("rfile0");
 

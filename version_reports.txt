@@ -11,3 +11,9 @@ Time was 122277 milliseconds
 generate_files(100, 1000000) at 954MB Total
 
 --Version 2--
+    94MB
+generate_files(10, 1000000);
+Time was 3943.31 milliseconds
+    931MB
+generate_files(100, 10000);
+Time was 103638 milliseconds
