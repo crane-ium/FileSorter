@@ -2,7 +2,7 @@
 
 std::size_t STR_LEN = 1024;
 std::string RFILENAME = "../rfiles/rfiles"; //with \d+.txt conc'd on
-std::size_t BASECOUNT = 1024 * 10; //# of integer-str per file
+std::size_t BASECOUNT = 1024 * 1; //# of integer-str per file
 std::size_t FILECOUNT = 100;
 std::string WFILENAME = "../sfile.txt";
 

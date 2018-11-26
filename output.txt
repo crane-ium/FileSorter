@@ -1,0 +1,116 @@
+Generating random smaller files
+Sorting all files
+Made ../rfiles/rfiles0.txt
+Made ../rfiles/rfiles1.txt
+Made ../rfiles/rfiles2.txt
+Made ../rfiles/rfiles3.txt
+Made ../rfiles/rfiles4.txt
+Made ../rfiles/rfiles5.txt
+Made ../rfiles/rfiles6.txt
+Made ../rfiles/rfiles7.txt
+Made ../rfiles/rfiles8.txt
+Made ../rfiles/rfiles9.txt
+Made ../rfiles/rfiles10.txt
+Made ../rfiles/rfiles11.txt
+Made ../rfiles/rfiles12.txt
+Made ../rfiles/rfiles13.txt
+Made ../rfiles/rfiles14.txt
+Made ../rfiles/rfiles15.txt
+Made ../rfiles/rfiles16.txt
+Made ../rfiles/rfiles17.txt
+Made ../rfiles/rfiles18.txt
+Made ../rfiles/rfiles19.txt
+Made ../rfiles/rfiles20.txt
+Made ../rfiles/rfiles21.txt
+Made ../rfiles/rfiles22.txt
+Made ../rfiles/rfiles23.txt
+Made ../rfiles/rfiles24.txt
+Made ../rfiles/rfiles25.txt
+Made ../rfiles/rfiles26.txt
+Made ../rfiles/rfiles27.txt
+Made ../rfiles/rfiles28.txt
+Made ../rfiles/rfiles29.txt
+Made ../rfiles/rfiles30.txt
+Made ../rfiles/rfiles31.txt
+Made ../rfiles/rfiles32.txt
+Made ../rfiles/rfiles33.txt
+Made ../rfiles/rfiles34.txt
+Made ../rfiles/rfiles35.txt
+Made ../rfiles/rfiles36.txt
+Made ../rfiles/rfiles37.txt
+Made ../rfiles/rfiles38.txt
+Made ../rfiles/rfiles39.txt
+Made ../rfiles/rfiles40.txt
+Made ../rfiles/rfiles41.txt
+Made ../rfiles/rfiles42.txt
+Made ../rfiles/rfiles43.txt
+Made ../rfiles/rfiles44.txt
+Made ../rfiles/rfiles45.txt
+Made ../rfiles/rfiles46.txt
+Made ../rfiles/rfiles47.txt
+Made ../rfiles/rfiles48.txt
+Made ../rfiles/rfiles49.txt
+Made ../rfiles/rfiles50.txt
+Made ../rfiles/rfiles51.txt
+Made ../rfiles/rfiles52.txt
+Made ../rfiles/rfiles53.txt
+Made ../rfiles/rfiles54.txt
+Made ../rfiles/rfiles55.txt
+Made ../rfiles/rfiles56.txt
+Made ../rfiles/rfiles57.txt
+Made ../rfiles/rfiles58.txt
+Made ../rfiles/rfiles59.txt
+Made ../rfiles/rfiles60.txt
+Made ../rfiles/rfiles61.txt
+Made ../rfiles/rfiles62.txt
+Made ../rfiles/rfiles63.txt
+Made ../rfiles/rfiles64.txt
+Made ../rfiles/rfiles65.txt
+Made ../rfiles/rfiles66.txt
+Made ../rfiles/rfiles67.txt
+Made ../rfiles/rfiles68.txt
+Made ../rfiles/rfiles69.txt
+Made ../rfiles/rfiles70.txt
+Made ../rfiles/rfiles71.txt
+Made ../rfiles/rfiles72.txt
+Made ../rfiles/rfiles73.txt
+Made ../rfiles/rfiles74.txt
+Made ../rfiles/rfiles75.txt
+Made ../rfiles/rfiles76.txt
+Made ../rfiles/rfiles77.txt
+Made ../rfiles/rfiles78.txt
+Made ../rfiles/rfiles79.txt
+Made ../rfiles/rfiles80.txt
+Made ../rfiles/rfiles81.txt
+Made ../rfiles/rfiles82.txt
+Made ../rfiles/rfiles83.txt
+Made ../rfiles/rfiles84.txt
+Made ../rfiles/rfiles85.txt
+Made ../rfiles/rfiles86.txt
+Made ../rfiles/rfiles87.txt
+Made ../rfiles/rfiles88.txt
+Made ../rfiles/rfiles89.txt
+Made ../rfiles/rfiles90.txt
+Made ../rfiles/rfiles91.txt
+Made ../rfiles/rfiles92.txt
+Made ../rfiles/rfiles93.txt
+Made ../rfiles/rfiles94.txt
+Made ../rfiles/rfiles95.txt
+Made ../rfiles/rfiles96.txt
+Made ../rfiles/rfiles97.txt
+Made ../rfiles/rfiles98.txt
+Made ../rfiles/rfiles99.txt
+Random smaller files generated
+Sorted files
+Sorted 104857600 bytes
+Milliseconds: 3736.46
+
+Sorting all files
+Opening files
+Opened 100 files
+Starting fsort
+Sorted files
+Sorted 104857600 bytes
+Milliseconds: 1489.57
+
+Press <RETURN> to close this window...

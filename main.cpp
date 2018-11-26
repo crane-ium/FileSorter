@@ -33,6 +33,7 @@ void clock(T f, op o=op::none){
         cout << "Random smaller files generated\n";
     case op::fsort:
         cout << "Sorted files\n";
+        cout << "Sorted " << (STR_LEN*FILECOUNT*BASECOUNT) << " bytes\n";
         break;
     default:
         break;
@@ -44,7 +45,7 @@ using namespace std;
 
 int main()
 {
-//    clock(gen_file, op::gen);
+    clock(gen_file, op::gen);
     clock(sort_files, op::fsort);
 
 //    vector<char*> v;
