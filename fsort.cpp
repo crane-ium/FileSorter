@@ -2,7 +2,7 @@
 
 std::size_t STR_LEN = 1024;
 std::string RFILENAME = "../rfiles/rfiles"; //with \d+.txt conc'd on
-std::size_t BASECOUNT = 1024 * 1; //# of integer-str per file
+std::size_t BASECOUNT = 1024 * 1 ; //# of integer-str per file
 std::size_t FILECOUNT = 100;
 std::string WFILENAME = "../sfile.txt";
 
@@ -55,10 +55,13 @@ void sort_files(){
             char* str = new char[STR_LEN+1];
 //            (*fptr) >> (*str); //of len SIZE_LEN + 1;
             fptr->read(str, STR_LEN);
+            char* eat = new char;
+            fptr->read(eat, 1); //eat the space
 //            std::cout << "here\n";
 //            std::cout << str << std::endl;
             cstr_vec.push_back(str);
 //            cout << str << endl;
+            delete eat;
             count++;
         }else
             break;
@@ -93,22 +96,25 @@ void sort_files(){
             sortedfile << smallest << " ";
 //            std::cout << smallest << std::endl;
 //            std::cout << "Got here\n";
-            if(!(stream_vec[i_small]->read(cstr_vec[i_small], STR_LEN))){
+            stream_vec[i_small]->read(cstr_vec[i_small], STR_LEN);
+            if(!(*stream_vec[i_small])){
 //            if(!((*stream_vec[i_small]) >> cstr_vec[i_small])){
                 auto it = stream_vec.begin() + i_small;
                 (*it)->close(); //CLOSE STREAM!
                 delete (*it);
                 (*it) = std::move(stream_vec.back());
                 stream_vec.pop_back();
-                auto nit = cstr_vec.begin() + i;
+                auto nit = cstr_vec.begin() + i_small;
                 delete[] (*nit);
                 (*nit) = std::move(cstr_vec.back());
                 cstr_vec.pop_back();
                 count--;
-//                std::cout << "Removed, at " << count << std::endl;
+                std::cout << "Removed, at " << count << std::endl;
                 if(!count)
                     break; //END TRUE WHILE LOOP
+                continue; //skip ignoring space if it vec is removed
             }
+            stream_vec[i_small]->ignore(1); //skip space if still going
         }
     }else
         std::cout << "Could not open " << WFILENAME << std::endl;
