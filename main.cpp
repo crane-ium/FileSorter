@@ -7,10 +7,10 @@
 #include "file_sort.h"
 #include "fsort.h"
 
-enum class op{gen, fsort};
+enum class op{gen, fsort, none};
 
 template<typename T>
-void clock(T f, op o){
+void clock(T f, op o=op::none){
     LARGE_INTEGER frequency, tstart, tend;
     double milliseconds;
     switch(o){
@@ -37,15 +37,20 @@ void clock(T f, op o){
     default:
         break;
     }
-    cout << "Milliseconds: " << milliseconds << endl;
+    cout << "Milliseconds: " << milliseconds << endl << endl;
 }
 
 using namespace std;
 
 int main()
 {
-//    clock(gen_file);
+//    clock(gen_file, op::gen);
     clock(sort_files, op::fsort);
+
+//    vector<char*> v;
+//    char* c = "HEYYY!\0";
+//    v.push_back(c);
+//    cout << v[0] << endl;
 //    istr i;
 //    i += 999;
 //    i += 1;

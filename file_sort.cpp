@@ -52,6 +52,7 @@ void file_sort::run(){
 //                    smallest = &__next[c];
 //                    i = c;
 //                }
+                /** @todo DON'T USE STRING.SIZE()!! **/
                 if(__next[c].size() <= (*smallest).size()){
                     flag = false;
 //                    cout << "Breaking " << __next[c] << ":"<<(*smallest) << endl;
@@ -90,9 +91,9 @@ void file_sort::run(){
     //close all
     cout << "Time was " << total_t << " milliseconds\n";
     sortedfile.close();
-    for(size_t i = 0; i < __f_vec.size(); i++){
-        __f_vec[i]->close();
-    }
+//    for(size_t i = 0; i < __f_vec.size(); i++){
+//        __f_vec[i]->close();
+//    }
 }
 
 void file_sort::sort_file(const string &fname){
